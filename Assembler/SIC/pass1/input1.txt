@@ -1,0 +1,13 @@
+COPY START     3000
+FIRST STL      RETADR
+           LDX      ZERO
+BACK  LDCH   str1,x 
+           STCH    str2,x
+           TIX        TEN
+           JLT        BACK
+ZERO WORD   0
+TEN   WORD   10
+str1    BYTE        C'Test String'
+str2    RESB      10
+RETADR  RESB  1
+          END       
